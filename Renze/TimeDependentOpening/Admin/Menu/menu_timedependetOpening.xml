@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- {load_language_text section="admin_menu"} -->
+<admin_menu>
+  <menugroup id="BOX_HEADING_GAMBIO">
+    <menuitem sort="71" link="admin.php" link_param="do=RenzeTimeDependentOpeningModuleCenterModule" title="Zeitgesteuertes öffnen" />
+  </menugroup>
+</admin_menu>

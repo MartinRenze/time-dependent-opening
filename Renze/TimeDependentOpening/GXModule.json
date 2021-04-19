@@ -1,0 +1,698 @@
+{
+  "title": "time_dependent_opening.title",
+  "description": "time_dependent_opening.description",
+  "forceIncludingFiles": true,
+  "configuration": {
+    "general":
+    {
+      "title": "Funktionen",
+      "fields": {
+        "buyButtonSwitchActive": {
+          "type": "checkbox",
+          "label": "Shop automatisch online und offline schalten",
+          "tooltip": {
+            "type": "info",
+            "text": "Es wird die Preisanzeige deaktiviert, damit der Kunde nicht bestellen kann. Pop-up Texte bleiben unverändert und ein komplettes deaktivieren des Shops findet nicht statt."
+          }
+        },
+        "dailyCronjobSwitchActive": {
+          "type": "checkbox",
+          "label": "Pop-up Texte für jeden Tag um 0:00 Uhr automatisch erstellen",
+          "tooltip": {
+            "type": "info",
+            "text": "Tickets für Pop-up Texte werden in das System eingetragen"
+          }
+        },
+        "dailyDbDeletionSwitchActive": {
+          "type": "checkbox",
+          "label": "Automatisches Löschen alter Pop-up-Text Einträge",
+          "tooltip": {
+            "type": "info",
+            "text": "Tickets für Pop-up Texte werden automatisch aus der Datenbank gelöscht"
+          }
+        }
+      }
+    },
+    "database":
+    {
+      "title": "Datenbank",
+      "fields": {
+        "deleteTimeForTickets": {
+          "type": "text",
+          "label": "Lösche alle Tickets älter als",
+          "tooltip": {
+            "type": "info",
+            "text": "(in Tagen)"
+          }
+        }
+      }
+    },
+    "monday":
+    {
+      "tab": "time_dependent_opening.section_title_monday",
+      "title": "time_dependent_opening.section_title_monday",
+      "fields": {
+        "mondayTime00": {
+          "type": "text",
+          "label": "Ruhetag ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Ruhetag Popup-Text wird angezeigt"
+          }
+        },
+        "mondayTime01": {
+          "type": "text",
+          "label": "Vorbestellen (01) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "mondayTime02": {
+          "type": "text",
+          "label": "Bestellungen zur Mittagszeit ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellungen zur Mittagszeit Popup-Text wird angezeigt"
+          }
+        },
+        "mondayTime03": {
+          "type": "text",
+          "label": "Kaufbutton zur Mittagszeit ausblenden ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Popup-Text Änderung"
+          }
+        },
+        "mondayTime04": {
+          "type": "text",
+          "label": "\"Geschlossen\"-Text anzeigen",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Geschlossen Popup-Text wird angezeigt"
+          }
+        },
+        "mondayTime05": {
+          "type": "text",
+          "label": "Vorbestellen (02) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "mondayTime06": {
+          "type": "text",
+          "label": "Bestellen ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellen Popup-Text wird angezeigt"
+          }
+        },
+        "mondayTime07": {
+          "type": "text",
+          "label": "keine Bestellungen über Internet ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Bestellungen über Internet Popup-Text wird angezeigt"
+          }
+        },
+        "mondayTime08": {
+          "type": "text",
+          "label": "Vorbestellen (03) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        }
+      }
+    },
+    "tuesday":
+    {
+      "tab": "time_dependent_opening.section_title_tuesday",
+      "title": "time_dependent_opening.section_title_tuesday",
+      "fields": {
+        "tuesdayTime00": {
+          "type": "text",
+          "label": "Ruhetag ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Ruhetag Popup-Text wird angezeigt"
+          }
+        },
+        "tuesdayTime01": {
+          "type": "text",
+          "label": "Vorbestellen (01) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "tuesdayTime02": {
+          "type": "text",
+          "label": "Bestellungen zur Mittagszeit ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellungen zur Mittagszeit Popup-Text wird angezeigt"
+          }
+        },
+        "tuesdayTime03": {
+          "type": "text",
+          "label": "Kaufbutton zur Mittagszeit ausblenden ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Popup-Text Änderung"
+          }
+        },
+        "tuesdayTime04": {
+          "type": "text",
+          "label": "\"Geschlossen\"-Text anzeigen",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Geschlossen Popup-Text wird angezeigt"
+          }
+        },
+        "tuesdayTime05": {
+          "type": "text",
+          "label": "Vorbestellen (02) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "tuesdayTime06": {
+          "type": "text",
+          "label": "Bestellen ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellen Popup-Text wird angezeigt"
+          }
+        },
+        "tuesdayTime07": {
+          "type": "text",
+          "label": "keine Bestellungen über Internet ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Bestellungen über Internet Popup-Text wird angezeigt"
+          }
+        },
+        "tuesdayTime08": {
+          "type": "text",
+          "label": "Vorbestellen (03) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        }
+      }
+    },
+    "wednesday":
+    {
+      "tab": "time_dependent_opening.section_title_wednesday",
+      "title": "time_dependent_opening.section_title_wednesday",
+      "fields": {
+        "wednesdayTime00": {
+          "type": "text",
+          "label": "Ruhetag ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Ruhetag Popup-Text wird angezeigt"
+          }
+        },
+        "wednesdayTime01": {
+          "type": "text",
+          "label": "Vorbestellen (01) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "wednesdayTime02": {
+          "type": "text",
+          "label": "Bestellungen zur Mittagszeit ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellungen zur Mittagszeit Popup-Text wird angezeigt"
+          }
+        },
+        "wednesdayTime03": {
+          "type": "text",
+          "label": "Kaufbutton zur Mittagszeit ausblenden ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Popup-Text Änderung"
+          }
+        },
+        "wednesdayTime04": {
+          "type": "text",
+          "label": "\"Geschlossen\"-Text anzeigen",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Geschlossen Popup-Text wird angezeigt"
+          }
+        },
+        "wednesdayTime05": {
+          "type": "text",
+          "label": "Vorbestellen (02) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "wednesdayTime06": {
+          "type": "text",
+          "label": "Bestellen ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellen Popup-Text wird angezeigt"
+          }
+        },
+        "wednesdayTime07": {
+          "type": "text",
+          "label": "keine Bestellungen über Internet ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Bestellungen über Internet Popup-Text wird angezeigt"
+          }
+        },
+        "wednesdayTime08": {
+          "type": "text",
+          "label": "Vorbestellen (03) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        }
+      }
+    },
+    "thursday":
+    {
+      "tab": "time_dependent_opening.section_title_thursday",
+      "title": "time_dependent_opening.section_title_thursday",
+      "fields": {
+        "thursdayTime00": {
+          "type": "text",
+          "label": "Ruhetag ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Ruhetag Popup-Text wird angezeigt"
+          }
+        },
+        "thursdayTime01": {
+          "type": "text",
+          "label": "Vorbestellen (01) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "thursdayTime02": {
+          "type": "text",
+          "label": "Bestellungen zur Mittagszeit ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellungen zur Mittagszeit Popup-Text wird angezeigt"
+          }
+        },
+        "thursdayTime03": {
+          "type": "text",
+          "label": "Kaufbutton zur Mittagszeit ausblenden ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Popup-Text Änderung"
+          }
+        },
+        "thursdayTime04": {
+          "type": "text",
+          "label": "\"Geschlossen\"-Text anzeigen",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Geschlossen Popup-Text wird angezeigt"
+          }
+        },
+        "thursdayTime05": {
+          "type": "text",
+          "label": "Vorbestellen (02) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "thursdayTime06": {
+          "type": "text",
+          "label": "Bestellen ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellen Popup-Text wird angezeigt"
+          }
+        },
+        "thursdayTime07": {
+          "type": "text",
+          "label": "keine Bestellungen über Internet ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Bestellungen über Internet Popup-Text wird angezeigt"
+          }
+        },
+        "thursdayTime08": {
+          "type": "text",
+          "label": "Vorbestellen (03) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        }
+      }
+    },
+    "friday":
+    {
+      "tab": "time_dependent_opening.section_title_friday",
+      "title": "time_dependent_opening.section_title_friday",
+      "fields": {
+        "fridayTime00": {
+          "type": "text",
+          "label": "Ruhetag ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Ruhetag Popup-Text wird angezeigt"
+          }
+        },
+        "fridayTime01": {
+          "type": "text",
+          "label": "Vorbestellen (01) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "fridayTime02": {
+          "type": "text",
+          "label": "Bestellungen zur Mittagszeit ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellungen zur Mittagszeit Popup-Text wird angezeigt"
+          }
+        },
+        "fridayTime03": {
+          "type": "text",
+          "label": "Kaufbutton zur Mittagszeit ausblenden ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Popup-Text Änderung"
+          }
+        },
+        "fridayTime04": {
+          "type": "text",
+          "label": "\"Geschlossen\"-Text anzeigen",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Geschlossen Popup-Text wird angezeigt"
+          }
+        },
+        "fridayTime05": {
+          "type": "text",
+          "label": "Vorbestellen (02) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "fridayTime06": {
+          "type": "text",
+          "label": "Bestellen ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellen Popup-Text wird angezeigt"
+          }
+        },
+        "fridayTime07": {
+          "type": "text",
+          "label": "keine Bestellungen über Internet ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Bestellungen über Internet Popup-Text wird angezeigt"
+          }
+        },
+        "fridayTime08": {
+          "type": "text",
+          "label": "Vorbestellen (03) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        }
+      }
+    },
+    "saturday":
+    {
+      "tab": "time_dependent_opening.section_title_saturday",
+      "title": "time_dependent_opening.section_title_saturday",
+      "fields": {
+        "saturdayTime00": {
+          "type": "text",
+          "label": "Ruhetag ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Ruhetag Popup-Text wird angezeigt"
+          }
+        },
+        "saturdayTime01": {
+          "type": "text",
+          "label": "Vorbestellen (01) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "saturdayTime02": {
+          "type": "text",
+          "label": "Bestellungen zur Mittagszeit ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellungen zur Mittagszeit Popup-Text wird angezeigt"
+          }
+        },
+        "saturdayTime03": {
+          "type": "text",
+          "label": "Kaufbutton zur Mittagszeit ausblenden ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Popup-Text Änderung"
+          }
+        },
+        "saturdayTime04": {
+          "type": "text",
+          "label": "\"Geschlossen\"-Text anzeigen",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Geschlossen Popup-Text wird angezeigt"
+          }
+        },
+        "saturdayTime05": {
+          "type": "text",
+          "label": "Vorbestellen (02) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "saturdayTime06": {
+          "type": "text",
+          "label": "Bestellen ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellen Popup-Text wird angezeigt"
+          }
+        },
+        "saturdayTime07": {
+          "type": "text",
+          "label": "keine Bestellungen über Internet ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Bestellungen über Internet Popup-Text wird angezeigt"
+          }
+        },
+        "saturdayTime08": {
+          "type": "text",
+          "label": "Vorbestellen (03) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        }
+      }
+    },
+    "sunday":
+    {
+      "tab": "time_dependent_opening.section_title_sunday",
+      "title": "time_dependent_opening.section_title_sunday",
+      "fields": {
+        "sundayTime00": {
+          "type": "text",
+          "label": "Ruhetag ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Ruhetag Popup-Text wird angezeigt"
+          }
+        },
+        "sundayTime01": {
+          "type": "text",
+          "label": "Vorbestellen (01) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "sundayTime02": {
+          "type": "text",
+          "label": "Bestellungen zur Mittagszeit ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellungen zur Mittagszeit Popup-Text wird angezeigt"
+          }
+        },
+        "sundayTime03": {
+          "type": "text",
+          "label": "Kaufbutton zur Mittagszeit ausblenden ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Popup-Text Änderung"
+          }
+        },
+        "sundayTime04": {
+          "type": "text",
+          "label": "\"Geschlossen\"-Text anzeigen",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, Geschlossen Popup-Text wird angezeigt"
+          }
+        },
+        "sundayTime05": {
+          "type": "text",
+          "label": "Vorbestellen (02) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        },
+        "sundayTime06": {
+          "type": "text",
+          "label": "Bestellen ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Bestellen Popup-Text wird angezeigt"
+          }
+        },
+        "sundayTime07": {
+          "type": "text",
+          "label": "keine Bestellungen über Internet ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird ausgeblendet, keine Bestellungen über Internet Popup-Text wird angezeigt"
+          }
+        },
+        "sundayTime08": {
+          "type": "text",
+          "label": "Vorbestellen (03) ab",
+          "regex": "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$",
+          "tooltip": {
+            "type": "info",
+            "text": "Kaufbutton wird eingeblendet, Vorbestellen Popup-Text wird angezeigt"
+          }
+        }
+      }
+    },
+"texts":
+    {
+      "tab": "Texte",
+      "title": "Texte",
+      "fields": {
+        "contentVorbestellen": {
+          "type": "editor",
+          "label": "Text für Vorbestellen Pop-up"
+        },
+        "contentMittagszeit": {
+          "type": "editor",
+          "label": "Text für Mittagszeit Pop-up"
+        },
+        "contentGeschlossen": {
+          "type": "editor",
+          "label": "Text für Geschlossen Pop-up"
+        },
+        "contentBestellen": {
+          "type": "editor",
+          "label": "Text für Bestellen Pop-up"
+        },
+        "contentKeinInternet": {
+          "type": "editor",
+          "label": "Text für KeinInternet Pop-up"
+        },
+        "contentRuhetag": {
+          "type": "editor",
+          "label": "Text für Ruhetag Pop-up"
+        }
+      }
+    }
+  }
+}
